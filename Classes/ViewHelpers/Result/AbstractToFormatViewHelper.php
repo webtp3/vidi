@@ -86,7 +86,7 @@ abstract class AbstractToFormatViewHelper extends AbstractViewHelper
         /** @var \Fab\Vidi\Domain\Model\Content $object */
         $object = reset($objects);
 
-        $this->temporaryDirectory = PATH_site . 'typo3temp/' . uniqid() . '/';
+        $this->temporaryDirectory = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . 'typo3temp/' . uniqid() . '/';
         GeneralUtility::mkdir($this->temporaryDirectory);
 
         // Compute file name and path variable

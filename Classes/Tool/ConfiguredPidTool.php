@@ -41,7 +41,7 @@ class ConfiguredPidTool extends AbstractTool
         $templateNameAndPath = 'EXT:vidi/Resources/Private/Standalone/Tool/ConfiguredPid/Launcher.html';
         $view = $this->initializeStandaloneView($templateNameAndPath);
         $view->assignMultiple([
-            'sitePath' => PATH_site,
+            'sitePath' => \TYPO3\CMS\Core\Core\Environment::getPublicPath(),
             'dataType' => $this->getModuleLoader()->getDataType(),
             'configuredPid' => $this->getModulePidService()->getConfiguredNewRecordPid(),
             'errors' => $this->getModulePidService()->validateConfiguredPid(),

@@ -70,7 +70,7 @@ class LanguageFileGenerator implements SingletonInterface
     protected function getLanguageDirectory()
     {
         // Create language file dynamically
-        $languageDirectory = PATH_site . 'typo3temp/vidi';
+        $languageDirectory = \TYPO3\CMS\Core\Core\Environment::getPublicPath()  . 'typo3temp/vidi';
         if (!is_dir($languageDirectory)) {
             GeneralUtility::mkdir($languageDirectory);
         }

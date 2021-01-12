@@ -39,7 +39,7 @@ class RelationAnalyserTool extends AbstractTool
     {
         $templateNameAndPath = 'EXT:vidi/Resources/Private/Standalone/Tool/RelationAnalyser/Launcher.html';
         $view = $this->initializeStandaloneView($templateNameAndPath);
-        $view->assign('sitePath', PATH_site);
+        $view->assign('sitePath', \TYPO3\CMS\Core\Core\Environment::getPublicPath() );
         $view->assign('dataType', $this->getModuleLoader()->getDataType());
         return $view->render();
     }

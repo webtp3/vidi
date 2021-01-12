@@ -21,7 +21,7 @@ class AdditionalAssetsViewHelper extends AbstractBackendViewHelper
 
     /**
      * @var \TYPO3\CMS\Core\Page\PageRenderer
-     * @Inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $pageRenderer;
 
@@ -56,7 +56,7 @@ class AdditionalAssetsViewHelper extends AbstractBackendViewHelper
     protected function resolvePath($uri)
     {
         $uri = GeneralUtility::getFileAbsFileName($uri);
-        $uri = substr($uri, strlen(PATH_site));
+        $uri = substr($uri, strlen(\TYPO3\CMS\Core\Core\Environment::getPublicPath() ));
         if (TYPO3_MODE === 'BE' && $uri !== false) {
             $uri = '../' . $uri;
         }

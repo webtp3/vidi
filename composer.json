@@ -1,6 +1,7 @@
 {
-	"name": "fab/vidi",
+	"name": "web-tp3/vidi",
 	"type": "typo3-cms-extension",
+	"version": "5.0.0",
 	"description": "Generic listing of records with versatile ways of interacting with the data, e.g. advanced filter, inline editing, mass editing, ... Veni, vidi, vici!",
 	"homepage": "https://github.com/fabarea/vidi",
 	"license": [
@@ -19,6 +20,10 @@
 		}
 	},
 	"replace": {
-		"typo3-ter/vidi": "self.version"
+		"typo3-ter/vidi": "self.version",
+		"fab/vidi": "self.version",
+		"web-tp3/vidi": "self.version"
+
+
 	}
 }

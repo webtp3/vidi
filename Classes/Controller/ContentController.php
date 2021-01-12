@@ -47,7 +47,7 @@ class ContentController extends ActionController
 
     /**
      * @var SelectionRepository
-     * @Inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $selectionRepository;
 
